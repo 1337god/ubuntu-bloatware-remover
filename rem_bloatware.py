@@ -44,3 +44,7 @@ if input('rly delete all these? (y/n)')=='y':
 
 print('purging coplete. the following were spared: ')
 print('\t'+'\n\t'.join([i for i in installed if i not in death_row]))
+
+if len(death_row)>0:
+    print('doing apt-get autoremove')
+    subprocess.Popen( 'sudo apt-get autoremove -y ', shell=True, stdout=subprocess.PIPE ).communicate()[0]
