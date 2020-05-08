@@ -50,4 +50,4 @@ if len(death_row)>0:
     subprocess.Popen( 'sudo apt-get autoremove -y ', shell=True, stdout=subprocess.PIPE ).communicate()[0]
 
 print('installing XFCE4')	
-subprocess.Popen( 'apt-get install xauth xorg lightdm lightdm-webkit-greeter xfce4 xfce4-goodies gnome-icon-theme -y', shell=True, stdout=subprocess.PIPE ).communicate()[0]
+subprocess.Popen( 'apt-get install xauth xorg lightdm lightdm-webkit-greeter xfce4 xfce4-goodies xfce4-indicator-plugin gnome-icon-theme -y', shell=True, stdout=subprocess.PIPE ).communicate()[0]
